@@ -6,9 +6,11 @@ using UnityEngine;
 [RequireComponent(typeof(Movement))]
 public class Pacman : MonoBehaviour {
     public Movement movement { get; private set; }
+    public static string PACMAN_TAG { get; private set; }
 
     private void Awake() {
         movement = GetComponent<Movement>();
+        PACMAN_TAG = gameObject.tag;
     }
 
     private void Update() {
